@@ -11,20 +11,20 @@ const morgan = require('morgan');
 app.use(express.static('public'));
 
 
+// var axios = require("axios").default;
 
-var axios = require("axios").default;
-
-var options = {
-  method: 'GET',
-  url: 'https://api-nba-v1.p.rapidapi.com/seasons/',
-  headers: {
-    'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com',
-    'x-rapidapi-key': '996a75504dmsh27d601a97da1825p164667jsn4f11b461ba50'
-  }
-};
+// var options = {
+//   method: 'GET',
+//   url: 'https://api-nba-v1.p.rapidapi.com/seasons/',
+//   headers: {
+//     'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com',
+//     'x-rapidapi-key': '996a75504dmsh27d601a97da1825p164667jsn4f11b461ba50'
+//   }
+// };
 
 axios.request(options).then(function (response) {
 	console.log(response.data);
+    console.log(`Your results are: ${response.data.api.seasons}`); // this gets my results, need a true free api
 }).catch(function (error) {
 	console.error(error);
 });
