@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/jstearne/nba-contenders/issues"
   },
-  "homepage": "https://github.com/jstearne/nba-contenders#readme"
+  "homepage": "https://github.com/jstearne/nba-contenders#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0"
+  }
 }
