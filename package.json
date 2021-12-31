@@ -1,0 +1,23 @@
+{
+  "name": "nba-contenders",
+  "version": "1.0.0",
+  "description": "stats-only ranking of nba teams",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jstearne/nba-contenders.git"
+  },
+  "keywords": [
+    "nba"
+  ],
+  "author": "jared stearne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jstearne/nba-contenders/issues"
+  },
+  "homepage": "https://github.com/jstearne/nba-contenders#readme"
+}
