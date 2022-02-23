@@ -1,37 +1,16 @@
 const express = require('express');
-const router = express.Router();
-
-
 
 const PORT = process.env.PORT || 4000;
 const app = express();
+const favicon = require('serve-favicon');
+const path = require('path');
 
 // middleware
-const morgan = require('morgan');
 app.use(express.static('public'));
-
-
-// var axios = require("axios").default;
-
-// var options = {
-//   method: 'GET',
-//   url: 'https://api-nba-v1.p.rapidapi.com/seasons/',
-//   headers: {
-//     'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com',
-//     'x-rapidapi-key': '996a75504dmsh27d601a97da1825p164667jsn4f11b461ba50'
-//   }
-// };
-
-axios.request(options).then(function (response) {
-	console.log(response.data);
-    console.log(`Your results are: ${response.data.api.seasons}`); // this gets my results, need a true free api
-}).catch(function (error) {
-	console.error(error);
-});
-
 
 // view engine
 app.set('view engine', 'ejs');
+app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 
 // routes
 app.get('/', (req, res) => {
@@ -46,4 +25,3 @@ app.get('/hello', function(request, response){
 app.listen(4000, function() {
     console.log(`You are looking LIVE at PORT:${PORT}!`);
 });
-
